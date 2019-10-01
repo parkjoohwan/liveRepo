@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> BoxModel </title>
+    <style>
+        /* div : block level Elements*/
+        .wow {
+            background-color: orange;
+            width: 50%;
+            padding: 20px;
+            /* padding이 적용되도 width가 유지됨 */
+            box-sizing: border-box;
+            
+            /* 
+                    좌우 정렬
+                margin-left: auto;
+                margin-right: auto; 
+                    아래처럼 단축가능 
+                */
+            /* margin: 0 auto; */
+        }
+
+        .wow.right{
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wow">
+        wow
+    </div>
+    <div class="wow right">
+        wow
+    </div>
+
+
+
+</body>
+
+</html>

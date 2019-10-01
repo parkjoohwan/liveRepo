@@ -1,0 +1,63 @@
+
+ /* CSS 초기 스타일은 없애고시작해라 */
+body, ul, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.l_wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.l_row{
+    background-color: yellow;
+    margin: 0 -10px;
+}
+
+.l_row::after{
+    content: ' ';
+    display: block;
+    clear: both;
+
+}
+
+.l_col{
+    background-color: orangered;
+    float:left;
+    /* width:33.333%; 조정해서 N단 그리드 가능 */
+    /* float에 마진주면 아래로 떨어진다 */
+    /* margin:0 10px; */
+    /* width값에 +됨 */
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.l_col.l_col_4_12{
+    width:33.333%;
+}
+
+.l_col.l_col_6_12{
+    width:50%;
+}
+
+.lamp{
+    background-color: blueviolet;
+    /* padding:20px; */
+}
+
+.lamp img{
+    width:100%
+}
+
+@media(max-width : 720px){
+    .l_col{
+        width:100%;
+    }
+}
