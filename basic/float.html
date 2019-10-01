@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
     <style>
-        body{
+        body {
             background-color: yellow;
             padding: 20px 0;
-            margin:0;
+            margin: 0;
         }
 
-        .wrapper{
+        .wrapper {
             width: 660px;
             margin: 50px auto;
             background-color: yellow;
@@ -18,31 +19,33 @@
         }
 
         /* 
-        자식이 float되면 자식의 높이를 반영하지 못함,
-        부모에게 after 가상요소를 줘서 해결하거나
-        overflow를 주어 해결한다.
+            자식이 float되면 자식의 높이를 반영하지 못함,
+            부모에게 after 가상요소를 줘서 해결하거나
+            overflow를 주어 해결한다.
+            굳이 best를 따지면 가상요소 추가?
          */
-        .wrapper::after{
+        .wrapper::after {
             content: '';
             background-color: red;
             display: block;
             clear: both;
         }
 
-        .box{
+        .box {
             width: 200px;
             margin: 10px;
             height: 200px;
             line-height: 200px;
             background: skyblue;
             font-size: 100px;
-            color:white;
+            color: white;
             text-align: center;
             float: left;
 
         }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <h1>float grid</h1>
@@ -50,10 +53,11 @@
         <div class="box"> B </div>
         <div class="box"> C </div>
         <p>
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+            zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
         </p>
 
     </div>
 
 </body>
+
 </html>
